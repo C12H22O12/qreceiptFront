@@ -1,11 +1,11 @@
 import React from "react";
-import Receipt from "./component/Receipt"
+import Navigation from "./component/Navigation"
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Receipt />
+      <Navigation />
     </div>
   );
 }
