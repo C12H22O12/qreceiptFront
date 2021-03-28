@@ -1,27 +1,23 @@
-
-  nav{
-    float:right;
-    position:realtive;
-  }
-
- .nav-container{
-   display:flex;
-   flex-direction:row;
-   width:100%;
-   margin-right: 3% 5% 0 0;
-   margin-block: 3%;
-   line-height:3%;
-   list-style-type:none;
- }
-
+.navbar {
+  background-color: #ffffff;
+  height:70px;
+}
  .nav-item{
    padding-inline:25px;
-   padding-block:20px;
+   padding-block:15px;
    cursor:pointer;
-   font-size:150%;
-   border-left: 3px solid #979797;
+   font-size:20px;
+   border-left: 2px solid #c0c0c0;
  }
-
- .nav-item:first-child{ border-left:none; }
- 
- .nav-item:hover{ color:#91BC54 }
+ .nav-item:first-child{
+    border-left:none;
+ }
+ .nav-item a{
+   color:black;
+   text-transform:uppercase;
+   text-align:center;
+   text-decoration:none;
+ }  
+ .nav-item a:hover{
+   color:#91BC54
+ }

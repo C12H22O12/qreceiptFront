@@ -1,0 +1,17 @@
+.info{ font-size:140%; }
+
+dt{ margin-right: 8%; }
+
+.Num{
+  position: absolute;
+  margin: 0 auto;
+  border-block : #eeeeee solid 3px;
+  width: 30%;
+  top:35%;
+  left:35%
+}
+
+.Num>p{ 
+  margin-block: 25%;
+  font-weight: bold;
+}

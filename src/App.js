@@ -1,11 +1,11 @@
 import React from "react";
-import Navigation from "./component/Navigation"
+import Detail from "./component/Detail"
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Navigation />
+      <Detail />
     </div>
   );
 }
