@@ -7,7 +7,7 @@ function Receipt(){
             <header class="container row mr-0 pr-0">
                 <p class="col-lg-9">주문일시 : 00/00/00 00:00 <br />주문번호 : 0000000000</p>
             </header>
-            <div className="receiptBody">
+            <div class="mt-0">
                 <h1 class="display-4">공급자 이름</h1>
                 <p>공급자등록번호 : 00000000000 <br /> 대표번호 : 000-0000-0000 </p>
                 <table class="table">
