@@ -1,11 +1,11 @@
 import React from "react";
-import Detail from "./component/Detail"
+import Register from "./component/Register"
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Detail />
+      <Register />
     </div>
   );
 }
