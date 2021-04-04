@@ -43,7 +43,7 @@ function renderItem(item) {
 
 function receiptForm(props) {
     return <div>
-        <header className="container row">
+        <header className="box row">
             <p className="col-lg-9 pl-0">주문일시 : {props.orderDay}
                 <br/>주문번호 : {props.orderNum}</p>
         </header>
@@ -59,7 +59,9 @@ function receiptForm(props) {
                     <th className="col-3 text-center">수량</th>
                     <th className="col-3 text-center">금액</th>
                 </thead>
+                <tbody>
                 {orderMenu.map(renderItem)}
+                </tbody>
                 <tfoot className="d-flex">
                     <th className="col-9">합계</th>
                     <th className="col-3 text-center">{props.sum}</th>
@@ -76,7 +78,7 @@ function receiptForm(props) {
 
 function loginForm(props) {
     return <div>
-        <header className="container row">
+        <header className="box row">
             <p className="col-lg-9 pl-0 my-2">QReceipt</p>
         </header>
         <div className="mt-0">
@@ -85,17 +87,17 @@ function loginForm(props) {
                 <thead className="d-flex">
                     <th colspan="2" className="col-12">로그인하기</th>
                 </thead>
-                <tr className="d-flex">
+                <tbody className="d-flex">
                     <td className="col-3">아이디</td>
                     <td className="col-9 text-center"><input class="w-100 py-2 px-4 border rounded-pill"></input></td>
-                </tr>
-                <tr className="d-flex">
+                </tbody>
+                <tbody className="d-flex">
                     <td className="col-3">비밀번호</td>
                     <td className="col-9 text-center"><input type="password" class="w-100 py-2 px-4 border rounded-pill"></input></td>
-                </tr>
-                <tr className="d-flex">
+                </tbody>
+                <tbody className="d-flex">
                     <td className="col-12 p-4"></td>
-                </tr>
+                </tbody>
                 <tfoot className="d-flex">
                     <th colspan="2" className="col-12 text-right"><input class="loginBtn btn btn-dark btn-lg rounded-pill" type="button" value="로그인"></input></th>
                 </tfoot>
@@ -103,16 +105,16 @@ function loginForm(props) {
         </div>
         <footer>
             <dl>
-                <dd className="w-100">간단 조회만 하려면?</dd>
-                <dt className="w-100">전화번호로 찾기</dt>
+                <dd className="plus w-100">간단 조회만 하려면?</dd>
+                <dt className="plusFun w-100">전화번호로 찾기</dt>
             </dl>
             <dl>
-                <dd className="w-100">아직 가입이 안 되어 있다면?</dd>
-                <dt className="w-100">회원가입</dt>
+                <dd className="plus w-100">아직 가입이 안 되어 있다면?</dd>
+                <dt className="plusFun w-100">회원가입</dt>
             </dl>
             <dl>
-                <dd className="w-100">아이디/비밀번호를 잊어버렸다면?</dd>
-                <dt className="w-100">아이디/비밀번호 찾기</dt>
+                <dd className="plus w-100">아이디/비밀번호를 잊어버렸다면?</dd>
+                <dt className="plusFun w-100">아이디/비밀번호 찾기</dt>
             </dl>
         </footer>
     </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import Receipt from "./Receipt"
-import Navigation from "./Navigation"
 import './Detail.css';
 
 function Main({
