@@ -17,3 +17,15 @@ p, th, td{
     margin-inline:3%;
 }
 
+dd, dt{
+    display:inline;
+    font-size: 130%;
+}
+
+dd{
+    margin-right:3%;
+}
+
+dt:hover{
+    text-decoration: underline;
+}

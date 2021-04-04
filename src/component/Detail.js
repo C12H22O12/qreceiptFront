@@ -26,6 +26,7 @@ function Detail({
                 </div>
                 <div className="col-lg-5 p-0 align-self-center">
                     <Receipt
+                        form = "true"
                         orderDay="21/04/03"
                         orderNum="1472583691"
                         offerName="주단태"

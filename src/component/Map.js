@@ -13,6 +13,7 @@ function Map() {
                 <div className="col-lg-5 p-0">
                     <h1 className="display-4">영수증 상세보기</h1>
                     <Receipt
+                    form = "true"
                     orderDay="21/04/03"
                     orderNum="1472583691"
                     offerName="주단태"

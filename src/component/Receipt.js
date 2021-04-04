@@ -2,46 +2,16 @@ import React from "react";
 import './Receipt.css';
 import Menu from "./Menu";
 
-function Receipt({
-    orderDay,
-    orderNum,
-    offerName,
-    offerNum,
-    offerPhoneNum,
-    sum,
-    checkDay,
-    check
-}) {
+function Receipt(props) {
+    var componentForm = props.form;
+
     return (
         <div className="frame">
-            <header className="container row">
-                <p className="col-lg-9">주문일시 : {orderDay}
-                    <br/>주문번호 : {orderNum}</p>
-            </header>
-            <div className="mt-0">
-                <h1 className="display-4">{offerName}</h1>
-                <p>공급자등록번호 : {offerNum}
-                    <br/>
-                    대표번호 : {offerPhoneNum}
-                </p>
-                <table className="table">
-                    <thead className="d-flex">
-                        <th className="col-6">메뉴</th>
-                        <th className="col-3 text-center">수량</th>
-                        <th className="col-3 text-center">금액</th>
-                    </thead>
-                    {orderMenu.map(renderItem)}
-                    <tfoot className="d-flex">
-                        <th className="col-9">합계</th>
-                        <th className="col-3 text-center">{sum}</th>
-                    </tfoot>
-                </table>
-            </div>
-            <footer>
-                <p>결제일 : {checkDay}
-                    <br/>결제유무 : {check}
-                </p>
-            </footer>
+            {
+                componentForm === "true"
+                    ? receiptForm(props)
+                    : loginForm(props)
+            }
         </div>
     )
 }
@@ -50,17 +20,17 @@ export default Receipt;
 
 const orderMenu = [
     {
-        id:1,
+        id: 1,
         menu: "생수",
         cnt: 4,
         won: "4000"
     }, {
-        id:2,
+        id: 2,
         menu: "주단태빌리지 피규어",
         cnt: 1,
         won: "심수련이 부숨"
     }, {
-        id:3,
+        id: 3,
         menu: "흰두부",
         cnt: 1,
         won: "2800"
@@ -69,4 +39,81 @@ const orderMenu = [
 
 function renderItem(item) {
     return <Menu key={item.id} menu={item.menu} cnt={item.cnt} won={item.won}/>
+}
+
+function receiptForm(props) {
+    return <div>
+        <header className="container row">
+            <p className="col-lg-9 pl-0">주문일시 : {props.orderDay}
+                <br/>주문번호 : {props.orderNum}</p>
+        </header>
+        <div className="mt-0">
+            <h1 className="display-4">{props.offerName}</h1>
+            <p>공급자등록번호 : {props.offerNum}
+                <br/>
+                대표번호 : {props.offerPhoneNum}
+            </p>
+            <table className="table">
+                <thead className="d-flex">
+                    <th className="col-6">메뉴</th>
+                    <th className="col-3 text-center">수량</th>
+                    <th className="col-3 text-center">금액</th>
+                </thead>
+                {orderMenu.map(renderItem)}
+                <tfoot className="d-flex">
+                    <th className="col-9">합계</th>
+                    <th className="col-3 text-center">{props.sum}</th>
+                </tfoot>
+            </table>
+        </div>
+        <footer>
+            <p>결제일 : {props.checkDay}
+                <br/>결제유무 : {props.check}
+            </p>
+        </footer>
+    </div>
+}
+
+function loginForm(props) {
+    return <div>
+        <header className="container row">
+            <p className="col-lg-9 pl-0 my-2">QReceipt</p>
+        </header>
+        <div className="mt-0">
+            <h1 className="display-4 mt-2 mb-4">LOGIN</h1>
+            <table className="table">
+                <thead className="d-flex">
+                    <th colspan="2" className="col-12">로그인하기</th>
+                </thead>
+                <tr className="d-flex">
+                    <td className="col-3">아이디</td>
+                    <td className="col-9 text-center"><input class="w-100 py-2 px-4 border rounded-pill"></input></td>
+                </tr>
+                <tr className="d-flex">
+                    <td className="col-3">비밀번호</td>
+                    <td className="col-9 text-center"><input type="password" class="w-100 py-2 px-4 border rounded-pill"></input></td>
+                </tr>
+                <tr className="d-flex">
+                    <td className="col-12 p-4"></td>
+                </tr>
+                <tfoot className="d-flex">
+                    <th colspan="2" className="col-12 text-right"><input class="loginBtn btn btn-dark btn-lg rounded-pill" type="button" value="로그인"></input></th>
+                </tfoot>
+            </table>
+        </div>
+        <footer>
+            <dl>
+                <dd className="w-100">간단 조회만 하려면?</dd>
+                <dt className="w-100">전화번호로 찾기</dt>
+            </dl>
+            <dl>
+                <dd className="w-100">아직 가입이 안 되어 있다면?</dd>
+                <dt className="w-100">회원가입</dt>
+            </dl>
+            <dl>
+                <dd className="w-100">아이디/비밀번호를 잊어버렸다면?</dd>
+                <dt className="w-100">아이디/비밀번호 찾기</dt>
+            </dl>
+        </footer>
+    </div>
 }
