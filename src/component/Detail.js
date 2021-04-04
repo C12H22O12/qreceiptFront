@@ -107,4 +107,8 @@ function Detail({
     );
 }
 
+function name(params) {
+    
+}
+
 export default Detail;

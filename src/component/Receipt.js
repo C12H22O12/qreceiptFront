@@ -54,17 +54,21 @@ function receiptForm(props) {
                 대표번호 : {props.offerPhoneNum}
             </p>
             <table className="table">
-                <thead className="d-flex">
-                    <th className="col-6">메뉴</th>
-                    <th className="col-3 text-center">수량</th>
-                    <th className="col-3 text-center">금액</th>
+                <thead>
+                    <tr className="d-flex">
+                        <th className="col-6">메뉴</th>
+                        <th className="col-3 text-center">수량</th>
+                        <th className="col-3 text-center">금액</th>
+                    </tr>
                 </thead>
                 <tbody>
-                {orderMenu.map(renderItem)}
+                    {orderMenu.map(renderItem)}
                 </tbody>
-                <tfoot className="d-flex">
-                    <th className="col-9">합계</th>
-                    <th className="col-3 text-center">{props.sum}</th>
+                <tfoot>
+                    <tr className="d-flex">
+                        <th className="col-9">합계</th>
+                        <th className="col-3 text-center">{props.sum}</th>
+                    </tr>
                 </tfoot>
             </table>
         </div>
@@ -84,22 +88,37 @@ function loginForm(props) {
         <div className="mt-0">
             <h1 className="display-4 mt-2 mb-4">LOGIN</h1>
             <table className="table">
-                <thead className="d-flex">
-                    <th colspan="2" className="col-12">로그인하기</th>
+                <thead>
+                    <tr className="d-flex">
+                        <th colspan="2" className="col-12">로그인하기</th>
+                    </tr>
                 </thead>
-                <tbody className="d-flex">
-                    <td className="col-3">아이디</td>
-                    <td className="col-9 text-center"><input class="w-100 py-2 px-4 border rounded-pill"></input></td>
+                <tbody>
+                    <tr className="d-flex">
+                        <td className="col-3">아이디</td>
+                        <td className="col-9 text-center">
+                            <input class="w-100 py-2 px-4 border rounded-pill"></input>
+                        </td>
+                    </tr>
+                    <tr className="d-flex">
+                        <td className="col-3">비밀번호</td>
+                        <td className="col-9 text-center">
+                            <input type="password" class="w-100 py-2 px-4 border rounded-pill"></input>
+                        </td>
+                    </tr>
+                    <tr className="d-flex">
+                        <td className="col-12 p-4"></td>
+                    </tr>
                 </tbody>
-                <tbody className="d-flex">
-                    <td className="col-3">비밀번호</td>
-                    <td className="col-9 text-center"><input type="password" class="w-100 py-2 px-4 border rounded-pill"></input></td>
-                </tbody>
-                <tbody className="d-flex">
-                    <td className="col-12 p-4"></td>
-                </tbody>
-                <tfoot className="d-flex">
-                    <th colspan="2" className="col-12 text-right"><input class="loginBtn btn btn-dark btn-lg rounded-pill" type="button" value="로그인"></input></th>
+                <tfoot>
+                    <tr className="d-flex">
+                        <th colspan="2" className="col-12 text-right">
+                            <input
+                                class="loginBtn btn btn-dark btn-lg rounded-pill"
+                                type="button"
+                                value="로그인"></input>
+                        </th>
+                    </tr>
                 </tfoot>
             </table>
         </div>
