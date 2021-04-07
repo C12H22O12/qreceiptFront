@@ -19,18 +19,7 @@ function Main({
                 </div>
                 <div className="col-lg-5 p-0 align-self-center">
                     <Receipt
-                        form = "false"
-                        orderDay="21/04/03"
-                        orderNum="1472583691"
-                        offerName="주단태"
-                        offerNum="1234567890"
-                        offerPhoneNum="01000000000"
-                        menu="생수"
-                        cnt="4"
-                        won="4000"
-                        sum="4000"
-                        checkDay="21/04/04"
-                        check="O"/>
+                        form = "false"/>
                 </div>
 
             </div>

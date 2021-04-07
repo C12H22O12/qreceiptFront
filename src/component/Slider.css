@@ -1,0 +1,8 @@
+.container > *{
+    margin-block:5%;
+    font-size: 150%;
+}
+
+.container > *:hover{
+    
+}

@@ -44,7 +44,7 @@ function renderItem(item) {
 function receiptForm(props) {
     return <div>
         <header className="box row">
-            <p className="col-lg-9 pl-0">주문일시 : {props.orderDay}
+            <p className="col-lg-9">주문일시 : {props.orderDay}
                 <br/>주문번호 : {props.orderNum}</p>
         </header>
         <div className="mt-0">
