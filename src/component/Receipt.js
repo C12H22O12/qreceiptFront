@@ -23,19 +23,30 @@ const orderMenu = [
         id: 1,
         menu: "생수",
         cnt: 4,
-        won: "4000"
+        won: 5000
     }, {
         id: 2,
         menu: "주단태빌리지 피규어",
         cnt: 1,
-        won: "심수련이 부숨"
+        won: 0
     }, {
         id: 3,
         menu: "흰두부",
         cnt: 1,
-        won: "2800"
+        won: 2800
     }
 ]
+
+
+function sumCnt(item) {
+    var sum = 0;
+
+    for (var i = 0; i<item.length; i++){
+        sum += item[i].won;
+    }
+
+    return sum;
+}
 
 function renderItem(item) {
     return <Menu key={item.id} menu={item.menu} cnt={item.cnt} won={item.won}/>
@@ -67,7 +78,7 @@ function receiptForm(props) {
                 <tfoot>
                     <tr className="d-flex">
                         <th className="col-9">합계</th>
-                        <th className="col-3 text-center">{props.sum}</th>
+                        <th className="col-3 text-center">{sumCnt(orderMenu)}</th>
                     </tr>
                 </tfoot>
             </table>
