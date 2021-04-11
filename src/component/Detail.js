@@ -1,8 +1,7 @@
 import React from "react";
 import Receipt from "./Receipt"
 import Navigation from "./Navigation"
-import Slider from "./Slider"
-import './Detail.css';
+import "./Detail.css"
 
 function Detail({
     address,
@@ -12,25 +11,30 @@ function Detail({
     spoonCheck,
     origin
 }) {
+    var i = 0;
+    var lists = [];
+
+    while (i < 5) {
+        lists.push(<li>{i + 1}</li>);
+        i += 1;
+    }
 
     return (
-        <div className="container-fulid">
-            <div className="row">
+        <div className="detailBody container-fulid">
+            <div className="menu row">
                 <Navigation className="col-12 w-100"/>
             </div>
-
-            <div className="row  m-0 p-0">
-                <h1 className="col-12 mt-5 pt-5 mx-0 px-0 display-4">영수증 상세보기</h1>
-            </div>
-
-            <div className="row mt-5 mx-0 px-0">
-                <div className="col-lg-3">
-                    <Slider />
+            <div className="row text-center w-100 p-0 m-0">
+                <div className="col-xl-4 col-md-12">
+                    <h1 className="Title">영수증 상세보기</h1>
+                    <ul className="index">
+                        {lists}
+                    </ul>
                 </div>
 
-                <div className="col-lg-5 p-0 align-self-center">
+                <div className="receipt col-xl-4 col-md-7 align-self-center">
                     <Receipt
-                        form = "true"
+                        form="true"
                         orderDay="21/04/03"
                         orderNum="1472583691"
                         offerName="주단태"
@@ -39,35 +43,40 @@ function Detail({
                         menu="생수"
                         cnt="4"
                         won="4000"
-                        sum="4000"
                         checkDay="21/04/04"
                         check="O"/>
                 </div>
 
-                <div className="info col-auto">
-                    <dl className="text-left">
-                        <dt className="w-100">배달 주소</dt>
-                        <dd className="w-100">{address}</dd>
+                <div className="detailOption col-xl-4 col-md-5">
+                    <dl>
+                        <dt>배달 주소</dt>
+                        <hr></hr>
+                        <dd>{address}</dd>
                     </dl>
-                    <dl className="text-left">
-                        <dt className="w-100 mb-2">연락처</dt>
-                        <dd className="w-100">{phoneNum}</dd>
+                    <dl>
+                        <dt>연락처</dt>
+                        <hr></hr>
+                        <dd>{phoneNum}</dd>
                     </dl>
-                    <dl className="text-left">
-                        <dt className="w-100 mb-2">가게 요청사항</dt>
-                        <dd className="w-100">{shopOrder}</dd>
+                    <dl>
+                        <dt>가게 요청사항</dt>
+                        <hr></hr>
+                        <dd>{shopOrder}</dd>
                     </dl>
-                    <dl className="text-left">
-                        <dt className="w-100 mb-2">배달 요청사항</dt>
-                        <dd className="w-100">{deliveryOrder}</dd>
+                    <dl>
+                        <dt>배달 요청사항</dt>
+                        <hr></hr>
+                        <dd>{deliveryOrder}</dd>
                     </dl>
-                    <dl className="text-left">
-                        <dt className="w-100 mb-2">수저/포크 유무</dt>
-                        <dd className="w-100">{spoonCheck}</dd>
+                    <dl>
+                        <dt>수저/포크 유무</dt>
+                        <hr></hr>
+                        <dd>{spoonCheck}</dd>
                     </dl>
-                    <dl className="text-left">
-                        <dt className="w-100 mb-2">원산지 표시</dt>
-                        <dd className="w-100">{origin}</dd>
+                    <dl>
+                        <dt>원산지 표시</dt>
+                        <hr></hr>
+                        <dd>{origin}</dd>
                     </dl>
                 </div>
             </div>

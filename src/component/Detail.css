@@ -1,1 +1,91 @@
-.info{ font-size:140%; }
+@font-face {
+    font-family: 'TmoneyRoundWindExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.detailBody{
+    padding-top: 90px;
+}
+
+.Title{
+    font-size:350%;
+    font-family: 'TmoneyRoundWindExtraBold';
+}
+
+.index{
+    list-style:none;
+    padding: 0;
+}
+
+.index>li{
+    padding:3%;
+    font-size : 150%;
+}
+
+.detailOption > *{
+    width: 100%;
+    text-align: left;
+}
+
+dt,dd,dl{
+    font-size:120%;
+}
+
+dt{
+    color:#8ec048;
+    font-family: 'TmoneyRoundWindExtraBold';
+}
+
+dl>hr{
+    width: 45px;
+    text-align: left;
+    margin-inline: 0;
+    margin-top : 0;
+    border : 1px solid #8ec048;
+}
+
+@media (min-width:1200px) {
+    .detailOption > *{
+        padding-right:15px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .detailBody{
+        padding-top : 5%;
+    }
+
+    .receipt{
+        padding:0;
+    }
+
+    .Title{
+        font-size:250%;
+    }
+
+    .menu{
+        visibility:hidden;
+    }
+
+    .index>li{
+        display: inline;
+    }
+
+    .detailOption{
+        padding-right: 5px;
+    }
+
+}
+
+@media (max-width:750px) {
+    .detailOption{
+        padding:35px;
+    }
+    .detailOption>*{
+        border-block: soild #979797 1px;
+        padding-inline:20px;
+        padding-block:5px;
+    }
+}

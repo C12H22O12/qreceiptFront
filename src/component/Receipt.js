@@ -101,7 +101,7 @@ function loginForm(props) {
             <table className="table">
                 <thead>
                     <tr className="d-flex">
-                        <th colspan="2" className="col-12">로그인하기</th>
+                        <th colSpan="2" className="col-12">로그인하기</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -123,7 +123,7 @@ function loginForm(props) {
                 </tbody>
                 <tfoot>
                     <tr className="d-flex">
-                        <th colspan="2" className="col-12 text-right">
+                        <th colSpan="2" className="col-12 text-right">
                             <input
                                 class="loginBtn btn btn-dark btn-lg rounded-pill"
                                 type="button"

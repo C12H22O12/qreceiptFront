@@ -1,5 +1,4 @@
 import React from "react";
-import './Receipt.css';
 
 function Menu({menu, cnt, won}) {
     return (
