@@ -25,7 +25,7 @@ function Detail({
                 <Navigation className="col-12 w-100"/>
             </div>
             <div className="row text-center w-100 p-0 m-0">
-                <div className="col-xl-4 col-md-12">
+                <div className="col-xl-3 col-md-12">
                     <h1 className="Title">영수증 상세보기</h1>
                     <ul className="index">
                         {lists}
@@ -47,35 +47,29 @@ function Detail({
                         check="O"/>
                 </div>
 
-                <div className="detailOption col-xl-4 col-md-5">
+                <div className="detailOption col-xl-5 col-md-5">
                     <dl>
                         <dt>배달 주소</dt>
-                        <hr></hr>
                         <dd>{address}</dd>
                     </dl>
                     <dl>
                         <dt>연락처</dt>
-                        <hr></hr>
                         <dd>{phoneNum}</dd>
                     </dl>
                     <dl>
                         <dt>가게 요청사항</dt>
-                        <hr></hr>
                         <dd>{shopOrder}</dd>
                     </dl>
                     <dl>
                         <dt>배달 요청사항</dt>
-                        <hr></hr>
                         <dd>{deliveryOrder}</dd>
                     </dl>
                     <dl>
                         <dt>수저/포크 유무</dt>
-                        <hr></hr>
                         <dd>{spoonCheck}</dd>
                     </dl>
                     <dl>
                         <dt>원산지 표시</dt>
-                        <hr></hr>
                         <dd>{origin}</dd>
                     </dl>
                 </div>

@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'S-CoreDream-3Light';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-family: 'ELAND_Choice_L';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Choice_L.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 *{
-  font-family: 'S-CoreDream-3Light';
+  font-family: 'ELAND_Choice_L';
 }
 
 .App {

@@ -1,5 +1,6 @@
 import React from "react";
 import Receipt from "./Receipt"
+import './Main.css'
 
 function Main({
     address,
@@ -14,11 +15,7 @@ function Main({
 
             <div className="">
                 <div className="">
-                    <h1 className="">QReceipt</h1>
-                </div>
-                <div className="">
-                    <Receipt
-                        form = "false"/>
+                    <Receipt form="false"/>
                 </div>
 
             </div>
