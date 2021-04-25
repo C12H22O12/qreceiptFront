@@ -1,5 +1,6 @@
 import React from "react";
-import Receipt from "./Receipt"
+import Receipt from "./Main"
+import Navigation from "./Navigation"
 import './Main.css'
 
 function Main({
@@ -11,14 +12,20 @@ function Main({
     origin
 }) {
     return (
-        <div className="">
-
-            <div className="">
-                <div className="">
-                    <Receipt form="false"/>
+        <div className="detailBody container-fulid">
+            <div className="menu row">
+                <Navigation className="col-12 w-100"/>
+            </div>
+            <div className="row text-center w-100 p-0 m-0">
+                <div className="col-xl-3 col-md-12">
+                    <h1 className="Title">영수증 상세보기</h1>
+                   
                 </div>
 
-            </div>
+                <div className="receipt col-xl-4 col-md-7 align-self-center">
+                <Receipt form="false"/>
+                </div>
+        </div>
         </div>
     );
 }
