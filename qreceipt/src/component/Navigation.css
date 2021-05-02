@@ -1,28 +1,76 @@
-nav{    
-  background-color: #ebecf0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.Item{
-  font-weight: bold;
-  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
-  transition: all .2s ease-in-out;
+.item {
+  text-decoration: none;
+  color: purple;
+}
+
+.menu {
+  background-color: red;
+  width: 100%;
+  height: 100%;
+}
+
+.menubackground {
+  width: 2700px;
+  height: 2700px;
+  position: fixed;
+  left: -2240px;
+  z-index: 10;
+  top: -2240px;
+  transform: rotate(-45deg);
+  background-color: #28eca4;
+  transition: all 700ms ease-in;
+}
+
+.menulinks {
+  position: absolute;
+  z-index: -100;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  list-style-type: none;
+}
+
+.item {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.menubars {
+  position: absolute;
+  left: 20px;
+  top: 20px;
   cursor: pointer;
-  font-weight: 600;
-  margin : 20px;
-}
-.Item:hover{
-  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
-}
-.Item:active{
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+  width: 50px;
+  height: 50px;
+  z-index: 20;
 }
 
-.Item{
-  border: 0;
-  outline: 0;
-  font-size: 16px;
-  border-radius: 320px;
-  padding: 10px 20px;
+.menubars .menubar {
+  height: 5px;
+  transition: all 200ms ease-out;
+  position: absolute;
+  z-index: 30;
+  width: 30px;
   background-color: #fff;
-  text-shadow: 1px 1px 0 #fff;
+}
+
+.top {
+  top: 0;
+}
+
+.middle {
+  top: 10px;
+}
+.bottom {
+  top: 20px;
 }

@@ -1,12 +1,13 @@
-header{
-    background-color: #fff;
+header, footer{
+    display: block;
+    margin : 0;
+    padding: 0;
 }
 
 p,
 td,
 th {
     font-size: 130%;
-    background-color: #fff;
 }
 
 .frame {
@@ -16,14 +17,12 @@ th {
     border: 2px #e0e0e0 solid;
     box-shadow: 3px 3px 3px #979797;
     position: relative;
-    background-color: #fff;
 }
 
 .frame > * {
     text-align: left;
     margin-top: 2%;
     margin-inline: 3%;
-    background-color: #fff;
 }
 
 .plus,

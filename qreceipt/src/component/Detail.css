@@ -1,89 +1,86 @@
-.detailBody{
+.detailBody {
     padding-top: 90px;
 }
 
-.Title{
-    font-size:350%;
+.Title {
+    font-size: 350%;
 }
 
-.index{
-    list-style:none;
+.index {
+    list-style: none;
     padding: 0;
 }
 
-.index>*{
-    font-size:150%;
-    padding:3%;
+.index > * {
+    font-size: 150%;
+    padding: 3%;
 }
 
-.detailOption > *{
+.detailOption > * {
     width: 100%;
     text-align: left;
 }
 
-dt,dd,dl{
-    font-size:120%;
+dd,
+dl,
+dt {
+    font-size: 120%;
 }
 
-dl{
+dl {
     padding-block: 3px;
 }
 
-dt{
-    color:#bdbdbd;
+dt {
     padding-bottom: 10px;
 }
 
 @media (min-width:1200px) {
-    .detailOption > *{
-        padding-right:15px;
+    .detailOption > * {
+        padding-right: 15px;
     }
 }
 
 @media (max-width: 1200px) {
-    .detailBody{
-        padding-top : 5%;
+    .detailBody {
+        padding-top: 5%;
     }
 
-    .index{
+    .index {
         margin-block: 3%;
     }
 
-    .receipt{
-        padding:0;
+    .receipt {
+        padding: 0;
     }
 
-    .Title{
-        font-size:250%;
+    .Title {
+        font-size: 250%;
     }
 
-    .menu{
-        visibility:hidden;
-    }
-
-    .index>li{
+    .index > li {
         display: inline;
-        padding:5%;
+        padding: 5%;
     }
 
-    .detailOption{
+    .detailOption {
         padding-right: 5px;
     }
 
 }
 
 @media (max-width:750px) {
-    .detailOption{
-        padding:35px;
+    .detailOption {
+        padding: 35px;
     }
 
-    .index{
+    .index {
         margin-block: 5%;
     }
 
-    .detailOption>*{
+    .detailOption > * {
         border-block: soild #979797 1px;
-        padding-inline:20px;
-        padding-block:5px;
+        padding-inline: 20px;
+        padding-block: 5px;
     }
 }
